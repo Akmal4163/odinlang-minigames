@@ -53,7 +53,7 @@ restart_game :: proc () {
 }
 
 place_food :: proc () {
-    food_grid: [GRID_WIDTH * GRID_WIDTH]i32
+    food_grid: [GRID_WIDTH * GRID_WIDTH]u8
 
     for i in 0..<snake.len {
         food_grid[i32(snake.body[i].y * GRID_WIDTH + snake.body[i].x)] = 1
